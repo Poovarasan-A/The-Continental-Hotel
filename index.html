@@ -8,40 +8,68 @@
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdeliver.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="style.css" />
     <title>Hotel</title>
   </head>
   <body>
     <!--------Starts Here----------->
-    <div class="hero">
+    <section class="hero min-vh-100">
       <video autoplay loop muted plays-inline class="bg_vdo">
-        <source src="" type="video/mp4" />
+        <source src="back.mp4" type="video/mp4" />
       </video>
-      <div class="container-fluid">
+      <div class="container">
         <!-- Navbar start -->
-        <nav class="navbar navbar-expand-lg my-lg-0 mx-lg-5" id="navbar">
+        <nav class="navbar navbar-expand-lg" id="navbar">
+          <h1 class="logo my-5 text-light">
+            <a class="text-reset text-decoration-none" href="index.html"
+              >4U Hotel</a
+            >
+          </h1>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#menu"
           >
-            <i class="bi bi-list"></i>
+            <i class="bi bi-menu-button-wide"></i>
           </button>
           <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item mx-3">Home</li>
-              <li class="nav-item mx-3">Rooms</li>
-              <li class="nav-item mx-3">Our Services</li>
-              <li class="nav-item mx-3">Contact</li>
+            <ul class="navbar-nav ms-auto my-5">
+              <li class="nav-item mx-4">
+                <a href="index.html" class="nav-link text-reset">Home</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a href="" class="nav-link text-reset">Rooms</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a href="" class="nav-link text-reset">Our Services</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a href="" class="nav-link text-reset">Contact</a>
+              </li>
             </ul>
           </div>
         </nav>
+        <!-- Home content -->
+        <div class="row text-light justify-content-center text-center">
+          <div class="col-lg-8 col-12 mt-lg-5 py-lg-5">
+            <h1>Welcome to 4U Business Class Hotel,</h1>
+            <p class="my-4">
+              At 4U, we take pride in offering a warm and inviting haven for
+              travelers, conveniently situated in close proximity to the nearby
+              railway station. Whether you're a business traveler, a tourist
+              exploring the city, or a commuter passing through, our hotel is
+              designed to cater to your every need.
+            </p>
+            <button>Book Now</button>
+            <button>Explore</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
     <!-- navbar end -->
     <!-- Ends Here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
