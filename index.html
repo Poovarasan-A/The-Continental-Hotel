@@ -18,16 +18,16 @@
     <!--------Starts Here----------->
     <section class="hero min-vh-100">
       <video autoplay loop muted plays-inline class="bg_vdo">
-        <source src="back.mp4" type="video/mp4" />
+        <source src="bg2.mp4" type="video/mp4" />
       </video>
       <div class="container">
         <!-- Navbar start -->
         <nav class="navbar navbar-expand-lg" id="navbar">
-          <h1 class="logo my-5 text-light">
+          <h2 class="logo my-5">
             <a class="text-reset text-decoration-none" href="index.html"
               >4U Hotel</a
             >
-          </h1>
+          </h2>
           <button
             class="navbar-toggler"
             type="button"
@@ -37,17 +37,17 @@
             <i class="bi bi-menu-button-wide"></i>
           </button>
           <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto my-5">
-              <li class="nav-item mx-4">
+            <ul class="navbar-nav ms-auto my-lg-4">
+              <li class="nav-item mx-3">
                 <a href="index.html" class="nav-link text-reset">Home</a>
               </li>
-              <li class="nav-item mx-4">
-                <a href="" class="nav-link text-reset">Rooms</a>
+              <li class="nav-item mx-3">
+                <a href="#rooms" class="nav-link text-reset">Rooms</a>
               </li>
-              <li class="nav-item mx-4">
-                <a href="" class="nav-link text-reset">Our Services</a>
+              <li class="nav-item mx-3">
+                <a href="#services" class="nav-link text-reset">Our Services</a>
               </li>
-              <li class="nav-item mx-4">
+              <li class="nav-item mx-3">
                 <a href="" class="nav-link text-reset">Contact</a>
               </li>
             </ul>
@@ -55,22 +55,178 @@
         </nav>
         <!-- Home content -->
         <div class="row text-light justify-content-center text-center">
-          <div class="col-lg-8 col-12 mt-lg-5 py-lg-5">
-            <h1>Welcome to 4U Business Class Hotel,</h1>
-            <p class="my-4">
+          <div class="col-lg-8 col-12 mt-lg-5 pt-lg-5 wlcm">
+            <h1 class="anim">
+              Welcome to <span>4U Business Class Hotel,</span>
+            </h1>
+            <p class="my-4 anim">
               At 4U, we take pride in offering a warm and inviting haven for
               travelers, conveniently situated in close proximity to the nearby
               railway station. Whether you're a business traveler, a tourist
               exploring the city, or a commuter passing through, our hotel is
               designed to cater to your every need.
             </p>
-            <button>Book Now</button>
-            <button>Explore</button>
+            <button class="book_btn mx-3 my-2 anim">
+              <a href="#" class="text-reset text-decoration-none">Book Now</a>
+            </button>
+            <button class="expo_btn mx-3 my-2 anim">
+              <a href="#" class="text-reset text-decoration-none">Explore</a>
+            </button>
           </div>
         </div>
       </div>
     </section>
     <!-- navbar end -->
+    <!-- Rooms page start -->
+    <section class="min-vh-100" id="rooms">
+      <div class="row justify-content-center">
+        <h1 class="text-center my-lg-2">Rooms</h1>
+        <div class="col-10">
+          <!-- carousel starts -->
+          <div class="color_balls my-2 anim_ball">
+            <div class="circle1 mx-2 anim_ball"></div>
+            <div class="circle2 mx-2 anim_ball"></div>
+            <div class="circle3 mx-2 anim_ball"></div>
+          </div>
+          <div id="room_slide" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <!-- card start -->
+                <div class="card my-2">
+                  <div class="row g-0">
+                    <div class="col-lg-6">
+                      <!-- slider starts -->
+                      <img src="img/sin room1.jpg" class="img-fluid" />
+                      <!-- slider ends -->
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="card-body">
+                        <h4 class="card-title">Double Bed Room</h4>
+                        <p class="card-text"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card end -->
+              </div>
+              <div class="carousel-item">
+                <!-- card start -->
+                <div class="card my-2">
+                  <div class="row g-0">
+                    <div class="col-lg-6">
+                      <!-- slider starts -->
+                      <img src="img/sin room2.jpg" class="img-fluid" />
+                      <!-- slider ends -->
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="card-body">
+                        <h4 class="card-title">Triple Bed Room</h4>
+                        <p class="card-text"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card end -->
+              </div>
+              <div class="carousel-item">
+                <!-- card start -->
+                <div class="card my-2">
+                  <div class="row g-0">
+                    <div class="col-lg-6">
+                      <!-- slider starts -->
+                      <img src="img/sin room3.jpg" class="img-fluid" />
+                      <!-- slider ends -->
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="card-body">
+                        <h4 class="card-title">Single Room</h4>
+                        <p class="card-text"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card end -->
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                data-bs-target="#room_slide"
+                type="button"
+                data-bs-slide="prev"
+              ></button>
+              <button
+                class="carousel-control-next"
+                data-bs-target="#room_slide"
+                type="button"
+                data-bs-slide="next"
+              ></button>
+            </div>
+          </div>
+          <!-- carousel end -->
+        </div>
+      </div>
+    </section>
+    <!-- Rooms page end -->
+    <!-- Services Page start -->
+    <section class="room min-vh-100" id="services">
+      <div class="col-12">
+        <div id="services_Slide" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#services_Slide"
+              data-bs-slide-to="0"
+              class="islide active"
+              aria-current="true"
+              aria-label="1"
+            ></button>
+            <button
+              type="button"
+              class="islide"
+              data-bs-target="#services_Slide"
+              data-bs-slide-to="1"
+              aria-label="2"
+            ></button>
+            <button
+              type="button"
+              class="islide"
+              data-bs-target="#services_Slide"
+              data-bs-slide-to="2"
+              aria-label="3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item">
+              <img src="img/room0.jpg" class="img-fluid d-block w-100" />
+            </div>
+            <div class="carousel-item active">
+              <img src="img/room1.jpg" class="img-fluid d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="img/room2.jpg" class="img-fluid d-block w-100" />
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              data-bs-target="#services_Slide"
+              type="button"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              data-bs-target="#services_Slide"
+              type="button"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services page end -->
     <!-- Ends Here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
