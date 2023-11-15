@@ -1,11 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  /* color: ; */
+  /* color: ; */
+  /* color: ; */
 }
 .hero {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(7, 83, 58, 0.8), rgba(7, 19, 77, 0.8));
+  background-image: linear-gradient(rgba(22, 72, 99, 0.7), rgb(7, 25, 82));
+  /* background-image: linear-gradient(rgba(0, 4, 31, 0.6), rgb(0, 0, 0, 0.9)); */
   position: relative;
 }
 .bg_vdo {
@@ -27,16 +31,159 @@
   }
 }
 .navbar ul li {
-  color: #eeeded;
+  color: #fff;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  transition: 0.05s;
 }
 .navbar li:hover {
-  border-bottom: 3px solid #c70039;
+  color: #0079ff;
+  font-size: 19px;
+}
+.logo {
+  font-weight: 800;
   color: #fff;
+}
+.logo:hover {
+  color: #0079ff;
 }
 i {
   filter: invert(100%);
+}
+button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  background: none;
+  color: #fff;
+  /* transition: 0.5s; */
+}
+.wlcm .book_btn {
+  border: 3px solid #ff0008;
+  background: #88000550;
+  animation-delay: 1.5s;
+}
+.wlcm .expo_btn {
+  border: 3px solid #001eff;
+  background: #000f8350;
+  animation-delay: 2s;
+}
+.book_btn:hover {
+  border: 3px solid #be0006;
+  background: #be0006;
+}
+.expo_btn:hover {
+  border: 3px solid #0015b8;
+  background: #0015b8;
+}
+.wlcm h1 {
+  cursor: pointer;
+  font-weight: 800;
+  transition: 0.5s;
+}
+.wlcm h1 span {
+  color: #0079ff;
+}
+.wlcm p {
+  cursor: pointer;
+  animation-delay: 1s;
+}
+/* .wlcm h1:hover {
+  transform: translateX(-30px);
+}
+.wlcm p:hover {
+  transform: translateX(20px);
+} */
+.anim,
+.anim_ball {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* Home page end */
+/* ---Rooms page css --------*/
+#rooms {
+  background-color: #071952;
+  color: #fff;
+}
+/* ---------------ball animation starts------------------- */
+.color_balls {
+  display: flex;
+  justify-content: end;
+  margin-right: 90px;
+}
+.color_balls .circle1 {
+  width: 25px;
+  height: 25px;
+  background-color: #16ff00;
+  border-radius: 50%;
+  animation-delay: 1s;
+}
+.color_balls .circle2 {
+  width: 25px;
+  height: 25px;
+  background-color: #9400ff;
+  border-radius: 50%;
+  animation-delay: 1.5s;
+}
+.color_balls .circle3 {
+  width: 25px;
+  height: 25px;
+  background-color: #ff0303;
+  border-radius: 50%;
+  animation-delay: 2s;
+}
+/* .anim_ball {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+} */
+/* ----------------ball animation end-------------------- */
+#rooms .card {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #0079ff;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+/* -------------rooms page end---------------- */
+/* -----------Services page start------------ */
+#services .carousel-control-prev {
+  margin-top: 43%;
+  margin-left: 45%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(139, 139, 139, 0.9);
+}
+#services .carousel-control-next {
+  margin-top: 43%;
+  margin-right: 45%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(139, 139, 139, 0.9);
+}
+#services .carousel-indicators {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 23%;
+  margin-left: 5%;
+}
+#services .carousel-indicators .islide {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
