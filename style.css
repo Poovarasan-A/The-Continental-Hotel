@@ -12,6 +12,11 @@
   /* background-image: linear-gradient(rgba(0, 4, 31, 0.6), rgb(0, 0, 0, 0.9)); */
   position: relative;
 }
+nav .menu {
+  filter: invert(100%);
+  font-weight: 500;
+  font-size: 30px;
+}
 .bg_vdo {
   position: absolute;
   right: 0;
@@ -50,7 +55,7 @@
 i {
   filter: invert(100%);
 }
-button {
+.hero button {
   width: 120px;
   height: 40px;
   border: none;
@@ -95,8 +100,7 @@ button {
 .wlcm p:hover {
   transform: translateX(20px);
 } */
-.anim,
-.anim_ball {
+.anim {
   opacity: 0;
   transform: translateY(30px);
   animation: moveup 0.5s linear forwards;
@@ -108,6 +112,77 @@ button {
   }
 }
 /* Home page end */
+/* -------------Room cards start-------------- */
+.room_cards {
+  background-color: #071952;
+  color: #fff;
+}
+.room_cards .container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: #fff;
+  box-sizing: border-box;
+}
+.room_cards .card_img {
+  flex: 1;
+  overflow: hidden;
+  transition: 1s;
+  position: relative;
+}
+.card_img img {
+  width: 200%;
+  height: calc(90% - 10vh);
+  object-fit: cover;
+  box-shadow: 0px 1px 1px #000;
+  transition: 1.5s;
+}
+.card_img span {
+  background-color: #00489b9a;
+  display: block;
+  /* min-width: 100%; */
+  font-weight: 400;
+  font-size: 18px;
+}
+.card_img button {
+  padding: 8px 16px;
+  color: #fff;
+  position: absolute;
+  left: 240px;
+  bottom: 0;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+.card_img .cardexp_btn {
+  margin-left: 130px;
+  background-color: #0077ff49;
+  border: 3px solid #fff;
+}
+.card_img .cardres_btn {
+  margin-right: 130px;
+  background-color: #ff030349;
+  border: 3px solid #fff;
+}
+.card_img .cardres_btn:hover {
+  background-color: #ff0303;
+}
+.card_img .cardexp_btn:hover {
+  background-color: #0079ff;
+}
+
+.card_img:hover {
+  flex: 1 1 50%;
+  cursor: pointer;
+}
+.card_img:hover img {
+  width: 100%;
+}
+.card_img:hover button {
+  opacity: 1;
+  bottom: 150px;
+}
+/* -------------Room cards end-------------- */
+
 /* ---Rooms page css --------*/
 #rooms {
   background-color: #071952;
@@ -140,50 +215,80 @@ button {
   border-radius: 50%;
   animation-delay: 2s;
 }
-/* .anim_ball {
+.anim_ball {
   opacity: 0;
-  transform: translateY(30px);
-  animation: moveup 0.5s linear forwards;
+  transform: translateY(-80px);
+  animation: movedown 0.5s linear forwards;
 }
-@keyframes moveup {
+@keyframes movedown {
   100% {
     opacity: 1;
     transform: translateY(0px);
   }
-} */
+}
 /* ----------------ball animation end-------------------- */
 #rooms .card {
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  background-color: #0079ff;
-  box-shadow: rgba(0, 0, 0, 0.2);
+  background-color: #0069e09a;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 /* -------------rooms page end---------------- */
 /* -----------Services page start------------ */
-#services .carousel-control-prev {
-  margin-top: 43%;
-  margin-left: 45%;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgba(139, 139, 139, 0.9);
+#services {
+  height: 40vh;
+  background-color: #00489b;
+  color: #fff;
 }
-#services .carousel-control-next {
-  margin-top: 43%;
-  margin-right: 45%;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgba(139, 139, 139, 0.9);
+/* #services .service {
+  display: flex;
+  justify-content: center;
+} */
+.services p {
+  margin: 60px 20px;
+  font-size: 25px;
+  font-weight: 500;
 }
-#services .carousel-indicators {
-  display: inline-flex;
-  flex-direction: column;
-  margin-bottom: 23%;
-  margin-left: 5%;
+.services span {
+  font-size: 40px;
 }
-#services .carousel-indicators .islide {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+
+body .bg_hotel {
+  height: 60vh;
+  background-image: url(img/bg_hotel.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* ---------contact page start----------- */
+#contact {
+  background-color: #071952;
+  color: #fff;
+}
+/* ---------contact page end----------- */
+@media screen and (max-width: 600px) {
+  .logo {
+    margin: 0px 20px;
+  }
+  .wlcm p {
+    text-align: center;
+    margin: 0px 3px;
+  }
+  #services {
+    height: 50vh;
+    background-color: #071952;
+    color: #fff;
+  }
+  /* #services .service {
+    display: flex;
+    justify-content: center;
+  } */
+  .services p {
+    margin: 20px 5px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .services span {
+    font-size: 30px;
+  }
 }
