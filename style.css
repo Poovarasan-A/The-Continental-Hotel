@@ -117,69 +117,81 @@ i {
   background-color: #071952;
   color: #fff;
 }
-.room_cards .container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  color: #fff;
-  box-sizing: border-box;
-}
-.room_cards .card_img {
-  flex: 1;
-  overflow: hidden;
-  transition: 1s;
-  position: relative;
-}
-.card_img img {
-  width: 200%;
-  height: calc(90% - 10vh);
-  object-fit: cover;
-  box-shadow: 0px 1px 1px #000;
-  transition: 1.5s;
-}
-.card_img span {
-  background-color: #00489b9a;
-  display: block;
-  /* min-width: 100%; */
-  font-weight: 400;
-  font-size: 18px;
-}
-.card_img button {
-  padding: 8px 16px;
-  color: #fff;
-  position: absolute;
-  left: 240px;
-  bottom: 0;
-  opacity: 0;
-  transition: bottom 0.5s, opacity 0.5s;
-}
-.card_img .cardexp_btn {
-  margin-left: 130px;
-  background-color: #0077ff49;
-  border: 3px solid #fff;
-}
-.card_img .cardres_btn {
-  margin-right: 130px;
-  background-color: #ff030349;
-  border: 3px solid #fff;
-}
-.card_img .cardres_btn:hover {
-  background-color: #ff0303;
-}
-.card_img .cardexp_btn:hover {
-  background-color: #0079ff;
-}
+@media screen and (max-width: 1400px) {
+  .room_cards .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    color: #fff;
+    box-sizing: border-box;
+  }
+  .room_cards .card_img {
+    flex: 1;
+    overflow: hidden;
+    transition: 1s;
+    position: relative;
+  }
+  .card_img img {
+    width: 200%;
+    height: calc(90% - 10vh);
+    object-fit: cover;
+    box-shadow: 0px 1px 1px #000;
+    transition: 1.5s;
+  }
+  .card_img span {
+    background-color: #0303039a;
+    display: block;
+    padding: 10px 0 0 0;
+    /* min-width: 100%; */
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+  }
+  .card_img button {
+    padding: 8px 16px;
+    color: #fff;
+    position: absolute;
+    left: 240px;
+    bottom: 0;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+  }
+  .card_img .cardexp_btn {
+    margin-left: 130px;
+    background-color: #0077ff49;
+    border: 3px solid #fff;
+  }
+  .card_img .cardres_btn {
+    margin-right: 130px;
+    background-color: #ff030349;
+    border: 3px solid #fff;
+  }
+  .card_img .cardres_btn:hover {
+    background-color: #ff0303;
+  }
+  .card_img .cardexp_btn:hover {
+    background-color: #0079ff;
+  }
 
-.card_img:hover {
-  flex: 1 1 50%;
-  cursor: pointer;
-}
-.card_img:hover img {
-  width: 100%;
-}
-.card_img:hover button {
-  opacity: 1;
-  bottom: 150px;
+  .card_img:hover {
+    flex: 1 1 50%;
+    cursor: pointer;
+  }
+  .card_img:hover img {
+    width: 100%;
+  }
+  .card_img:hover button {
+    opacity: 1;
+    bottom: 150px;
+  }
+  .card_img:hover span {
+    height: 30px;
+    background-color: #fdfdfd9a;
+    color: #000;
+    padding: 0;
+  }
 }
 /* -------------Room cards end-------------- */
 
@@ -234,26 +246,29 @@ i {
 
 /* -------------rooms page end---------------- */
 /* -----------Services page start------------ */
-#services {
+#services .service {
   height: 40vh;
-  background-color: #00489b;
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
+}
+#services .bg_img {
+  height: 60vh;
 }
 /* #services .service {
   display: flex;
   justify-content: center;
 } */
-.services p {
-  margin: 60px 20px;
-  font-size: 25px;
+#services p {
+  margin: 10px 20px;
+  font-size: 20px;
   font-weight: 500;
 }
-.services span {
-  font-size: 40px;
+#services span {
+  font-size: 35px;
 }
 
 body .bg_hotel {
-  height: 60vh;
+  height: 100vh;
   background-image: url(img/bg_hotel.jpg);
   background-position: center;
   background-size: cover;
@@ -264,6 +279,35 @@ body .bg_hotel {
   background-color: #071952;
   color: #fff;
 }
+#contact .contact_form {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+.contact_form button {
+  width: 100px;
+  margin: 15px 0;
+  padding: 5px 5px;
+  background: none;
+  border: none;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.contact_form button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.contact_form label {
+  margin-top: 15px;
+  font-size: 18px;
+}
+.contact_form input {
+  padding: 5px;
+  margin-top: 2px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
 /* ---------contact page end----------- */
 @media screen and (max-width: 600px) {
   .logo {
@@ -275,7 +319,7 @@ body .bg_hotel {
   }
   #services {
     height: 50vh;
-    background-color: #071952;
+    background-color: #0303039a;
     color: #fff;
   }
   /* #services .service {
@@ -290,5 +334,76 @@ body .bg_hotel {
   }
   .services span {
     font-size: 30px;
+  }
+  .room_cards .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    box-sizing: border-box;
+  }
+  .room_cards .card_img {
+    width: 100%;
+    overflow: hidden;
+    transition: 1s;
+    position: relative;
+  }
+  .card_img img {
+    object-fit: cover;
+    box-shadow: 0px 1px 1px #000;
+    transition: 1.5s;
+  }
+  .card_img span {
+    background-color: #0303039a;
+    display: block;
+    /* min-width: 100%; */
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+  }
+  .card_img button {
+    padding: 6px 12px;
+    color: #fff;
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+  }
+  .card_img .cardexp_btn {
+    margin-left: 130px;
+    background-color: #0077ff49;
+    border: 3px solid #fff;
+  }
+  .card_img .cardres_btn {
+    margin-right: 130px;
+    background-color: #ff030349;
+    border: 3px solid #fff;
+  }
+  .card_img .cardres_btn:hover {
+    background-color: #ff0303;
+  }
+  .card_img .cardexp_btn:hover {
+    background-color: #0079ff;
+  }
+
+  .card_img:hover {
+    height: 50%;
+    cursor: pointer;
+  }
+  .card_img:hover img {
+    width: 100%;
+  }
+  .card_img:hover button {
+    opacity: 1;
+    bottom: 180px;
+  }
+  .card_img:hover span {
+    height: 30px;
+    background-color: #fdfdfdc7;
+    color: #000;
+    padding: 0;
   }
 }
