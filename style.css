@@ -1,22 +1,32 @@
 * {
   margin: 0;
   padding: 0;
-  /* color: ; */
-  /* color: ; */
-  /* color: ; */
+}
+:root {
+  --color-1: #2c4b6b;
+  --bg-color: #031927;
+  /* --color-1: #c5adc5; */
+  --color-2: #fdf8f0;
+  --color-3: ;
 }
 #preloader {
-  background: #071952 url(img/loader2.gif) no-repeat center center;
+  background: var(--bg-color) url(img/loader2.gif) no-repeat center center;
   background-size: 15%;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 1000;
 }
-.hero {
+body {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(22, 72, 99, 0.7), rgb(7, 25, 82));
+}
+.hero {
+  width: 100%;
+  background-image: linear-gradient(rgb(3, 25, 39, 0.8), rgb(3, 25, 39)),
+    url(img/bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   /* background-image: linear-gradient(rgba(0, 4, 31, 0.6), rgb(0, 0, 0, 0.9)); */
   position: relative;
 }
@@ -72,6 +82,15 @@ i {
   color: #fff;
   /* transition: 0.5s; */
 }
+.wlcm {
+  width: 100%;
+  min-height: 60vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .wlcm .book_btn {
   border: 3px solid #ff0008;
   background: #88000550;
@@ -122,14 +141,18 @@ i {
 /* Home page end */
 /* -------------Room cards start-------------- */
 .room_cards {
-  background-color: #071952;
+  width: 100%;
+  background-color: var(--bg-color);
   color: #fff;
 }
 .room_cards a {
   text-decoration: none;
   color: #fff;
 }
-@media screen and (max-width: 1400px) {
+.room_cards h1 {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1024px) {
   .room_cards .container {
     width: 100%;
     height: 100vh;
@@ -144,7 +167,6 @@ i {
     position: relative;
   }
   .card_img img {
-    width: 200%;
     height: calc(90% - 10vh);
     object-fit: cover;
     box-shadow: 0px 1px 1px #000;
@@ -168,7 +190,7 @@ i {
     left: 240px;
     bottom: 0;
     opacity: 0;
-    transition: bottom 0.5s, opacity 0.5s;
+    transition: bottom 0.3s;
   }
   .card_img .cardexp_btn {
     margin-left: 130px;
@@ -188,7 +210,7 @@ i {
   }
 
   .card_img:hover {
-    flex: 1 1 50%;
+    flex: 1 1 60%;
     cursor: pointer;
   }
   .card_img:hover img {
@@ -196,7 +218,7 @@ i {
   }
   .card_img:hover button {
     opacity: 1;
-    bottom: 150px;
+    bottom: 250px;
   }
   .card_img:hover span {
     height: 30px;
@@ -209,7 +231,7 @@ i {
 
 /* ---Rooms page css --------*/
 #rooms {
-  background-color: #071952;
+  background-color: var(--bg-color);
   color: #fff;
 }
 /* ---------------ball animation starts------------------- */
@@ -252,7 +274,7 @@ i {
 }
 /* ----------------ball animation end-------------------- */
 #rooms .card {
-  background-color: #0069e09a;
+  background-color: var(--color-1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -291,7 +313,7 @@ body .bg_hotel {
 }
 /* ---------contact page start----------- */
 #contact {
-  background-color: #071952;
+  background-color: var(--bg-color);
   color: #fff;
 }
 #contact .contact_form {

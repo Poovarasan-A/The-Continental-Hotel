@@ -18,10 +18,10 @@
   <body>
     <div id="preloader"></div>
     <!--------Starts Here----------->
-<!----Home Page----><section class="hero">
-      <video autoplay loop muted plays-inline class="bg_vdo">
+<!----Home Page----><div class="hero">
+      <!-- <video autoplay loop muted plays-inline class="bg_vdo">
         <source src="bg2.mp4" type="video/mp4" />
-      </video>
+      </video> -->
       <div class="container">
         <!-- Navbar start -->
         <nav class="navbar navbar-expand-lg" id="navbar">
@@ -56,12 +56,12 @@
           </div>
         </nav>
         <!-- Home content -->
-        <div class="row text-light justify-content-center text-center">
-          <div class="col-lg-8 col-12 mt-lg-5 pt-lg-5 wlcm">
+          <div class="wlcm">
+            <div class="wlcm_box">
             <h1 class="anim">
               Welcome to <span>4U Business Class Hotel,</span>
             </h1>
-            <p class="my-4 anim">
+            <p class="anim">
               At 4U, we take pride in offering a warm and inviting haven for
               travelers, conveniently situated in close proximity to the nearby
               railway station. Whether you're a business traveler, a tourist
@@ -76,14 +76,12 @@
                 >Explore</a
               >
             </button>
+            </div>
           </div>
-        </div>
       </div>
-    </section>
+    </div>
 <!----Room Expand Page----><section class="room_cards" id="room_card">
-      <div class="row justify-content-center">
-        <h1 class="mt-5 text-center">Explore Our Rooms</h1>
-        <div class="col-10">
+        <h1 class="text-center">Explore Our Rooms</h1>
           <div class="container text-center">
               <div class="card_img">
                 <span>Single Bed</span>
@@ -116,8 +114,6 @@
                 <button class="cardres_btn">Reserve</button>
               </div>
           </div>
-        </div>
-      </div>
     </section>
 <!----Rooms Card Page----><section class="min-vh-100" id="rooms">
       <div class="row justify-content-center">
@@ -129,10 +125,60 @@
             <div class="circle2 mx-2 anim_ball"></div>
             <div class="circle3 mx-2 anim_ball"></div>
           </div>
-
-                <!------------------------ card 1 ---------------------->
-                <!-- card start -->
+                <!------------------------ card 1 Start ---------------------->
+                 <!-- card start -->
 <!-- card -1--><div class="card my-1">
+                  <div class="row g-0">
+                    <div class="col-lg-5 my-4 px-5">
+                      <div class="card-body">
+                        <h4 class="card-title">Single Bed Room</h4>
+                        <p class="card-text">
+                          <ul class="my-lg-3 my-2 list-unstyled">
+                            <li class="my-lg-2"><span class="material-symbols-outlined">
+                              task_alt
+                              </span> Sleeps x 1</li>
+                            <li class="my-lg-2">Air Conditioned Room</li>
+                            <li class="my-lg-2">Chair Provided with Desk</li>
+                            <li class="my-lg-2">Bathroom Amenities</li>
+                            <li class="my-lg-2">Free Newspaper</li>
+                            <li class="my-lg-2">High Speed Wireless</li>
+                            <li class="my-lg-2">Satellite Television</li>
+                            <li class="my-lg-2">Bathtub Only</li>
+                            <li class="my-lg-2">Shower Only</li>
+                           </ul>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-lg-7 my-4 px-4">
+                      <!-- slider starts -->
+                      <div id="single" class="carousel slide">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="img/room card3.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/room card4.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/room card5.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#single" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#single" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <!-- slider ends -->
+                    </div>
+                  </div>
+                </div>
+                <!------------------------ card 1 end ------------------>
+                <!------------------------ card 2 End ---------------------->
+<!-- card -2--><div class="card my-1">
                   <div class="row g-0">
                     <div class="col-lg-7 my-4 px-4">
                       <!-- slider starts -->
@@ -181,15 +227,13 @@
                     </div>
                   </div>
                 </div>
-                <!-- card end -->
-                 <!------------------------ card 1 End ---------------------->
-                <!------------------------ card 2 Start ---------------------->
-                 <!-- card start -->
-<!-- card -2--><div class="card my-1" id="single">
+                <!------------------------ card 2 End ---------------------->
+                <!-- --------------card 3 start------------------ -->
+<!-- card -3--><div class="card my-1">
                   <div class="row g-0">
                     <div class="col-lg-5 my-4 px-5">
                       <div class="card-body">
-                        <h4 class="card-title">Single Bed Room</h4>
+                        <h4 class="card-title">Deluxe Bed Room</h4>
                         <p class="card-text">
                           <ul class="my-lg-3 my-2 list-unstyled">
                             <li class="my-lg-2">Sleeps x 1</li>
@@ -205,39 +249,6 @@
                         </p>
                       </div>
                     </div>
-                    <div class="col-lg-7 my-4 px-4">
-                      <!-- slider starts -->
-                      <div id="single" class="carousel slide">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="img/room card3.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="img/room card4.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="img/room card5.jpg" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#single" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#single" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                      <!-- slider ends -->
-                    </div>
-                  </div>
-                </div>
-                <!-- card end -->
-                <!------------------------ card 2 End ---------------------->
-                <!-- --------------card 3 start------------------ -->
-                <!-- card start -->
-<!-- card -3--><div class="card my-1">
-                  <div class="row g-0">
                     <div class="col-lg-7 my-4 px-4">
                       <!-- slider starts -->                   
                       <div id="deluxe" class="carousel slide">
@@ -263,28 +274,83 @@
                       </div>
                       <!-- slider ends -->
                     </div>
+                  </div>
+                </div>
+                <!-- --------------------card 3 end --------------------- -->
+                <!-- --------------------card 4 start --------------------- -->
+<!-- card -4--><div class="card my-1">
+                  <div class="row g-0">
+                    <div class="col-lg-7 my-4 px-4">
+                      <!-- slider starts -->                   
+                      <div id="family" class="carousel slide">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="img/room card6.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/room card5.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/room card4.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#family" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#family" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <!-- slider ends -->
+                    </div>
                     <div class="col-lg-5 my-4 px-5">
                       <div class="card-body">
-                        <h4 class="card-title">Deluxe Bed Room</h4>
-                        <p class="card-text"></p>
+                        <h4 class="card-title">Family Bed Room</h4>
+                        <p class="card-text">
+                          <ul class="my-lg-3 my-2 list-unstyled">
+                            <li class="my-lg-2">Sleeps x 1</li>
+                            <li class="my-lg-2">Air Conditioned Room</li>
+                            <li class="my-lg-2">Chair Provided with Desk</li>
+                            <li class="my-lg-2">Bathroom Amenities</li>
+                            <li class="my-lg-2">Free Newspaper</li>
+                            <li class="my-lg-2">High Speed Wireless</li>
+                            <li class="my-lg-2">Satellite Television</li>
+                            <li class="my-lg-2">Bathtub Only</li>
+                            <li class="my-lg-2">Shower Only</li>
+                           </ul>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- --------------------card 3 end --------------------- -->
-                <!-- --------------------card 4 start------------------------- -->
+                <!-- --------------------card 4 end --------------------- -->
+                <!-- --------------------card 5 start------------------------- -->
                 <!-- card start -->
-<!-- card -4--><div class="card my-1">
+<!-- card -5--><div class="card my-1">
                   <div class="row g-0">
                     <div class="col-lg-5 my-4 px-5">
                       <div class="card-body">
-                        <h4 class="card-title">Family Room</h4>
-                        <p class="card-text"></p>
+                        <h4 class="card-title">Couple Room</h4>
+                        <p class="card-text">
+                          <ul class="my-lg-3 my-2 list-unstyled">
+                            <li class="my-lg-2">Sleeps x 1</li>
+                            <li class="my-lg-2">Air Conditioned Room</li>
+                            <li class="my-lg-2">Chair Provided with Desk</li>
+                            <li class="my-lg-2">Bathroom Amenities</li>
+                            <li class="my-lg-2">Free Newspaper</li>
+                            <li class="my-lg-2">High Speed Wireless</li>
+                            <li class="my-lg-2">Satellite Television</li>
+                            <li class="my-lg-2">Bathtub Only</li>
+                            <li class="my-lg-2">Shower Only</li>
+                           </ul>
+                        </p>
                       </div>
                     </div>
                     <div class="col-lg-7 my-4 px-4">
                       <!-- slider starts -->
-                      <div id="family" class="carousel slide">
+                      <div id="couple" class="carousel slide">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
                             <img src="img/room card3.jpg" class="d-block w-100" alt="...">
@@ -296,11 +362,11 @@
                             <img src="img/room card1.jpg" class="d-block w-100" alt="...">
                           </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#family" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#couple" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                           <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#family" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#couple" data-bs-slide="next">
                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
                           <span class="visually-hidden">Next</span>
                         </button>
