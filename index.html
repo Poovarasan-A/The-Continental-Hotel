@@ -16,6 +16,7 @@
     <title>Hotel</title>
   </head>
   <body>
+    <div id="preloader"></div>
     <!--------Starts Here----------->
 <!----Home Page----><section class="hero">
       <video autoplay loop muted plays-inline class="bg_vdo">
@@ -87,25 +88,25 @@
               <div class="card_img">
                 <span>Single Bed</span>
                 <img src="img/room card.jpg" alt="">
-                <button class="cardexp_btn">Explore</button>
+                <button class="cardexp_btn"><a href="#single">Explore</a></button>
                 <button class="cardres_btn">Reserve</button>
               </div>
               <div class="card_img">
                 <span>Double Bed</span>
                 <img src="img/room card1.jpg" alt="">
-                <button class="cardexp_btn">Explore</button>
+                <button class="cardexp_btn"><a href="#double">Explore</a></button>
                 <button class="cardres_btn">Reserve</button>
               </div>
               <div class="card_img">
                 <span>Deluxe Bed</span>
                 <img src="img/room card2.jpg" alt="">
-                <button class="cardexp_btn">Explore</button>
+                <button class="cardexp_btn"><a href="#deluxe">Explore</a></button>
                 <button class="cardres_btn">Reserve</button>
               </div>
               <div class="card_img">
                 <span>Family Bed</span>
                 <img src="img/room card3.jpg" alt="">
-                <button class="cardexp_btn">Explore</button>
+                <button class="cardexp_btn"><a href="#family">Explore</a></button>
                 <button class="cardres_btn">Reserve</button>
               </div>
               <div class="card_img">
@@ -161,7 +162,21 @@
                     <div class="col-lg-5 my-4 px-5">
                       <div class="card-body">
                         <h4 class="card-title">Double Bed Room</h4>
-                        <p class="card-text"></p>
+                        <p class="card-text">
+                          <ul class="my-lg-3 my-2 list-unstyled">
+                            <li class="my-lg-2">Sleeps x 2</li>
+                            <li class="my-lg-2">Air Conditioned Room</li>
+                            <li class="my-lg-2">Bathtub Shower Combination</li>
+                            <li class="my-lg-2">Chair Provided with Desk</li>
+                            <li class="my-lg-2">Bathroom Amenities</li>
+                            <li class="my-lg-2">Free Newspaper</li>
+                            <li class="my-lg-2">High Speed Wireless</li>
+                            <li class="my-lg-2">Satellite Television</li>
+                            <li class="my-lg-2">Bathtub Only</li>
+                            <li class="my-lg-2">High Speed Internet</li>
+                            <li class="my-lg-2">Shower Only</li>
+                           </ul>
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -170,12 +185,24 @@
                  <!------------------------ card 1 End ---------------------->
                 <!------------------------ card 2 Start ---------------------->
                  <!-- card start -->
-<!-- card -2--><div class="card my-1">
+<!-- card -2--><div class="card my-1" id="single">
                   <div class="row g-0">
                     <div class="col-lg-5 my-4 px-5">
                       <div class="card-body">
                         <h4 class="card-title">Single Bed Room</h4>
-                        <p class="card-text"></p>
+                        <p class="card-text">
+                          <ul class="my-lg-3 my-2 list-unstyled">
+                            <li class="my-lg-2">Sleeps x 1</li>
+                            <li class="my-lg-2">Air Conditioned Room</li>
+                            <li class="my-lg-2">Chair Provided with Desk</li>
+                            <li class="my-lg-2">Bathroom Amenities</li>
+                            <li class="my-lg-2">Free Newspaper</li>
+                            <li class="my-lg-2">High Speed Wireless</li>
+                            <li class="my-lg-2">Satellite Television</li>
+                            <li class="my-lg-2">Bathtub Only</li>
+                            <li class="my-lg-2">Shower Only</li>
+                           </ul>
+                        </p>
                       </div>
                     </div>
                     <div class="col-lg-7 my-4 px-4">
@@ -325,11 +352,10 @@
         </div>
         </div>
       </div>
-    </section>
   </div>
     </section>
     
-<!----Contact Page----><section class="contact min-vh-100" id="contact">
+<!----Contact Page----><section class="contact" id="contact">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-10 my-lg-5 my-3 contact_form">
@@ -353,7 +379,7 @@
       <br>
 
       <phone>
-      <a href="tel" class="link-underline-light">+91 90000 00001</a>
+      <a href="tel" class="link-underline-light text-reset">+91 90000 00001</a>
       </phone>
 
       <br>
@@ -363,16 +389,27 @@
       </b>
       <br>
       <address>
-        <a href="#" class="link-underline-light">4ubusinesshotel@gmail.com</a>
+        <a href="#" class="link-underline-light text-reset">4ubusinesshotel@gmail.com</a>
       </address>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15545.124208637111!2d80.270276!3d13.081366!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266075983f975%3A0x827c2aa1d6f1ff80!2s4%20U%20Business%20Class!5e0!3m2!1sen!2sin!4v1697262255309!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
        </div>
     </div>
   </div>
-  <hr>
 </section>
 
     <!-- Ends Here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    var loader = document.getElementById("preloader")
+    window.addEventListener("load", function(){
+      loader.style.display = "none";
+    })
+
+  </script>
+
+
+
+
   </body>
 </html>

@@ -5,6 +5,14 @@
   /* color: ; */
   /* color: ; */
 }
+#preloader {
+  background: #071952 url(img/loader2.gif) no-repeat center center;
+  background-size: 15%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+}
 .hero {
   width: 100%;
   height: 100vh;
@@ -95,10 +103,10 @@ i {
   animation-delay: 1s;
 }
 /* .wlcm h1:hover {
-  transform: translateX(-30px);
+  transform: translateY(-30px);
 }
 .wlcm p:hover {
-  transform: translateX(20px);
+  transform: translateY(20px);
 } */
 .anim {
   opacity: 0;
@@ -115,6 +123,10 @@ i {
 /* -------------Room cards start-------------- */
 .room_cards {
   background-color: #071952;
+  color: #fff;
+}
+.room_cards a {
+  text-decoration: none;
   color: #fff;
 }
 @media screen and (max-width: 1400px) {
@@ -246,6 +258,9 @@ i {
 
 /* -------------rooms page end---------------- */
 /* -----------Services page start------------ */
+#services {
+  height: 100vh;
+}
 #services .service {
   height: 40vh;
   background-color: rgba(0, 0, 0, 0.8);
@@ -280,7 +295,6 @@ body .bg_hotel {
   color: #fff;
 }
 #contact .contact_form {
-  height: 50vh;
   display: flex;
   flex-direction: column;
   padding: 20px 15px;
@@ -318,7 +332,7 @@ body .bg_hotel {
     margin: 0px 3px;
   }
   #services {
-    height: 50vh;
+    height: 100vh;
     background-color: #0303039a;
     color: #fff;
   }
