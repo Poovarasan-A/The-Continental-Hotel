@@ -23,8 +23,7 @@ body {
 }
 .hero {
   width: 100%;
-  background-image: linear-gradient(rgb(3, 25, 39, 0.8), rgb(3, 25, 39)),
-    url(img/bg2.jpg);
+  background-image: linear-gradient(rgb(3, 25, 39, 0.8), rgb(3, 25, 39));
   background-repeat: no-repeat;
   background-size: cover;
   /* background-image: linear-gradient(rgba(0, 4, 31, 0.6), rgb(0, 0, 0, 0.9)); */
@@ -238,7 +237,7 @@ i {
 .color_balls {
   display: flex;
   justify-content: end;
-  margin-right: 90px;
+  margin-right: 170px;
 }
 .color_balls .circle1 {
   width: 25px;
