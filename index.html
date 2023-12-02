@@ -424,13 +424,15 @@
 <!----Contact Page----><section class="contact" id="contact">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 col-10 my-lg-5 my-3 contact_form">
+      <div class="col-lg-6 col-10 my-lg-5 my-3">
+        <form class="contact_form" onsubmit="sendEmail(); reset(); return false;"">
         <h2>Contact Us</h2>
-        <label for="">Name</label><input type="text" placeholder="Enter your Name">
-        <label for="">Mobile</label><input type="text" placeholder="Enter your Mobile Number">
-        <label for="">E-mail</label><input type="text" placeholder="Enter your Mail Id">
-        <label for="">City</label><input type="text" placeholder="Enter your City">
+        <label for="">Name</label><input type="text" placeholder="Enter your Name" id="name">
+        <label for="">Mobile</label><input type="text" placeholder="Enter your Mobile Number" id="mobnum">
+        <label for="">E-mail</label><input type="text" placeholder="Enter your Mail Id" id="email">
+        <label for="">City</label><input type="text" placeholder="Enter your City" id="city">
         <button type="submit">Submit</button>
+        </form>
       </div>
        <div class="col-lg-6 my-lg-5 my-3">
         <h1>4U Business Class Hotel</h1>
@@ -472,6 +474,10 @@
       loader.style.display = "none";
     })
 
+  </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    
   </script>
 
 

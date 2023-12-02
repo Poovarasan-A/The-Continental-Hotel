@@ -83,7 +83,7 @@ i {
 }
 .wlcm {
   width: 100%;
-  min-height: 70vh;
+  min-height: 60vh;
   color: #fff;
   display: flex;
   align-items: center;
@@ -108,6 +108,45 @@ i {
   border: 3px solid #0015b8;
   background: #0015b8;
 }
+/* ---------------ball animation starts------------------- */
+.color_balls {
+  display: flex;
+  justify-content: end;
+  margin-right: 170px;
+}
+.color_balls .circle1 {
+  width: 25px;
+  height: 25px;
+  background-color: #16ff00;
+  border-radius: 50%;
+  animation-delay: 1s;
+}
+.color_balls .circle2 {
+  width: 25px;
+  height: 25px;
+  background-color: #9400ff;
+  border-radius: 50%;
+  animation-delay: 1.5s;
+}
+.color_balls .circle3 {
+  width: 25px;
+  height: 25px;
+  background-color: #ff0303;
+  border-radius: 50%;
+  animation-delay: 2s;
+}
+.anim_ball {
+  opacity: 0;
+  transform: translateY(-80px);
+  animation: movedown 0.5s linear forwards;
+}
+@keyframes movedown {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* ----------------ball animation end-------------------- */
 .wlcm h1 {
   cursor: pointer;
   font-weight: 800;
@@ -233,45 +272,7 @@ i {
   background-color: var(--bg-color);
   color: #fff;
 }
-/* ---------------ball animation starts------------------- */
-.color_balls {
-  display: flex;
-  justify-content: end;
-  margin-right: 170px;
-}
-.color_balls .circle1 {
-  width: 25px;
-  height: 25px;
-  background-color: #16ff00;
-  border-radius: 50%;
-  animation-delay: 1s;
-}
-.color_balls .circle2 {
-  width: 25px;
-  height: 25px;
-  background-color: #9400ff;
-  border-radius: 50%;
-  animation-delay: 1.5s;
-}
-.color_balls .circle3 {
-  width: 25px;
-  height: 25px;
-  background-color: #ff0303;
-  border-radius: 50%;
-  animation-delay: 2s;
-}
-.anim_ball {
-  opacity: 0;
-  transform: translateY(-80px);
-  animation: movedown 0.5s linear forwards;
-}
-@keyframes movedown {
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-/* ----------------ball animation end-------------------- */
+
 #rooms .card {
   background-color: var(--color-1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
