@@ -3,11 +3,11 @@
   padding: 0;
 }
 :root {
-  --color-1: #2c4b6b;
+  --color-1: #14365d;
   --bg-color: #031927;
   /* --color-1: #c5adc5; */
-  --color-2: #fdf8f0;
-  --color-3: ;
+  --color-2: #a96762;
+  --color-3: #001242;
 }
 #preloader {
   background: var(--bg-color) url(img/loader.gif) no-repeat center center;
@@ -18,12 +18,11 @@
   z-index: 1000;
 }
 body {
-  width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 }
 .hero {
-  width: 100%;
-  background-image: linear-gradient(rgb(3, 25, 39, 0.8), rgb(3, 25, 39));
+  background-image: linear-gradient(rgb(3, 25, 39, 0.7), rgb(3, 25, 39));
   background-repeat: no-repeat;
   background-size: cover;
   /* background-image: linear-gradient(rgba(0, 4, 31, 0.6), rgb(0, 0, 0, 0.9)); */
@@ -53,21 +52,21 @@ nav .menu {
   }
 }
 .navbar ul li {
-  color: #fff;
+  color: #ffffff89;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
 }
 .navbar li:hover {
-  color: #0079ff;
-  font-size: 19px;
+  color: #fff;
+  border-bottom: 3px solid var(--color-2);
 }
 .logo {
   font-weight: 800;
   color: #fff;
 }
 .logo:hover {
-  color: #0079ff;
+  color: var(--color-2);
 }
 i {
   filter: invert(100%);
@@ -108,52 +107,13 @@ i {
   border: 3px solid #0015b8;
   background: #0015b8;
 }
-/* ---------------ball animation starts------------------- */
-.color_balls {
-  display: flex;
-  justify-content: end;
-  margin-right: 170px;
-}
-.color_balls .circle1 {
-  width: 25px;
-  height: 25px;
-  background-color: #16ff00;
-  border-radius: 50%;
-  animation-delay: 1s;
-}
-.color_balls .circle2 {
-  width: 25px;
-  height: 25px;
-  background-color: #9400ff;
-  border-radius: 50%;
-  animation-delay: 1.5s;
-}
-.color_balls .circle3 {
-  width: 25px;
-  height: 25px;
-  background-color: #ff0303;
-  border-radius: 50%;
-  animation-delay: 2s;
-}
-.anim_ball {
-  opacity: 0;
-  transform: translateY(-80px);
-  animation: movedown 0.5s linear forwards;
-}
-@keyframes movedown {
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-/* ----------------ball animation end-------------------- */
 .wlcm h1 {
   cursor: pointer;
   font-weight: 800;
   transition: 0.5s;
 }
 .wlcm h1 span {
-  color: #0079ff;
+  color: var(--color-2);
 }
 .wlcm p {
   cursor: pointer;
@@ -179,7 +139,6 @@ i {
 /* Home page end */
 /* -------------Room cards start-------------- */
 .room_cards {
-  width: 100%;
   background-color: var(--bg-color);
   color: #fff;
 }
@@ -190,7 +149,53 @@ i {
 .room_cards h1 {
   margin-bottom: 40px;
 }
+.room_cards h1 span {
+  color: var(--color-2);
+  font-weight: 700;
+}
 @media screen and (min-width: 1024px) {
+  .wlcm .wlcm_box {
+    width: 80%;
+  }
+  /* ---------------ball animation starts------------------- */
+  .color_balls {
+    display: flex;
+    justify-content: end;
+    margin-right: 170px;
+  }
+  .color_balls .circle1 {
+    width: 25px;
+    height: 25px;
+    background-color: #16ff00;
+    border-radius: 50%;
+    animation-delay: 1s;
+  }
+  .color_balls .circle2 {
+    width: 25px;
+    height: 25px;
+    background-color: #9400ff;
+    border-radius: 50%;
+    animation-delay: 1.5s;
+  }
+  .color_balls .circle3 {
+    width: 25px;
+    height: 25px;
+    background-color: #ff0303;
+    border-radius: 50%;
+    animation-delay: 2s;
+  }
+  .anim_ball {
+    opacity: 0;
+    transform: translateY(-80px);
+    animation: movedown 0.5s linear forwards;
+  }
+  @keyframes movedown {
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  /* ----------------ball animation end-------------------- */
   .room_cards .container {
     width: 100%;
     height: 100vh;
@@ -271,11 +276,15 @@ i {
 #rooms {
   background-color: var(--bg-color);
   color: #fff;
+  padding-bottom: 20px;
 }
 
-#rooms .card {
+#rooms .card0 {
   background-color: var(--color-1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#rooms .card1 {
+  background-color: var(--color-2);
 }
 
 /* -------------rooms page end---------------- */
@@ -288,20 +297,56 @@ i {
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
 }
+#services .service_list {
+  display: grid;
+  margin: 30px 300px 0px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "i1 i2 i3 i4"
+    "i5 i5 i6 i6";
+  gap: 10px;
+  row-gap: 20px;
+}
+.icon1 {
+  grid-area: i1;
+}
+.icon2 {
+  grid-area: i2;
+}
+.icon3 {
+  grid-area: i3;
+}
+.icon4 {
+  grid-area: i4;
+}
+.icon5 {
+  grid-area: i5;
+}
+.icon6 {
+  grid-area: i6;
+}
+
+#services .icon {
+  display: grid;
+  justify-content: center;
+}
 #services .bg_img {
   height: 60vh;
 }
-/* #services .service {
-  display: flex;
+#services h1 span {
+  color: var(--color-2);
+  font-weight: 700;
+}
+.service_list span {
+  display: grid;
   justify-content: center;
-} */
-#services p {
-  margin: 10px 20px;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.service_list p {
   font-size: 20px;
   font-weight: 500;
-}
-#services span {
-  font-size: 35px;
 }
 
 body .bg_hotel {
@@ -343,34 +388,67 @@ body .bg_hotel {
   border: 1px solid #000;
   border-radius: 5px;
 }
+#contact h1 {
+  color: var(--color-2);
+}
 
 /* ---------contact page end----------- */
-@media screen and (max-width: 600px) {
+@media all and (max-width: 600px) {
+  html,
+  body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  /* ---------------ball animation starts------------------- */
+  .color_balls {
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+  }
+  .color_balls .circle1 {
+    width: 15px;
+    height: 15px;
+    background-color: #16ff00;
+    border-radius: 50%;
+    animation-delay: 1s;
+  }
+  .color_balls .circle2 {
+    width: 15px;
+    height: 15px;
+    background-color: #9400ff;
+    border-radius: 50%;
+    animation-delay: 1.5s;
+  }
+  .color_balls .circle3 {
+    width: 15px;
+    height: 15px;
+    background-color: #ff0303;
+    border-radius: 50%;
+    animation-delay: 2s;
+  }
+  .anim_ball {
+    opacity: 0;
+    transform: translateY(-80px);
+    animation: movedown 0.5s linear forwards;
+  }
+  @keyframes movedown {
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  /* ----------------ball animation end-------------------- */
   .logo {
     margin: 0px 20px;
   }
   .wlcm p {
     text-align: center;
-    margin: 0px 3px;
+    margin: 5px 4px 10px;
   }
-  #services {
-    height: 100vh;
-    background-color: #0303039a;
-    color: #fff;
-  }
-  /* #services .service {
-    display: flex;
-    justify-content: center;
-  } */
-  .services p {
-    margin: 20px 5px;
-    font-size: 12px;
-    font-weight: 400;
-    text-align: center;
-  }
-  .services span {
-    font-size: 30px;
-  }
+  /* Room cards start */
   .room_cards .container {
     width: 100%;
     height: 100vh;
@@ -379,13 +457,18 @@ body .bg_hotel {
     color: #fff;
     box-sizing: border-box;
   }
+  .room_cards h1 {
+    padding-top: 15px;
+  }
   .room_cards .card_img {
-    width: 100%;
+    flex: 1;
     overflow: hidden;
     transition: 1s;
     position: relative;
   }
   .card_img img {
+    height: calc(100% - 1vh);
+    width: 100%;
     object-fit: cover;
     box-shadow: 0px 1px 1px #000;
     transition: 1.5s;
@@ -393,20 +476,22 @@ body .bg_hotel {
   .card_img span {
     background-color: #0303039a;
     display: block;
+    padding: 10px 0 0 0;
     /* min-width: 100%; */
     font-weight: 600;
     font-size: 18px;
     position: absolute;
     width: 100%;
+    height: 95%;
   }
   .card_img button {
     padding: 6px 12px;
     color: #fff;
     position: absolute;
-    left: 40px;
+    left: 240px;
     bottom: 0;
     opacity: 0;
-    transition: bottom 0.5s, opacity 0.5s;
+    transition: bottom 1.5s;
   }
   .card_img .cardexp_btn {
     margin-left: 130px;
@@ -426,7 +511,7 @@ body .bg_hotel {
   }
 
   .card_img:hover {
-    height: 50%;
+    flex: 1 1 50%;
     cursor: pointer;
   }
   .card_img:hover img {
@@ -434,12 +519,33 @@ body .bg_hotel {
   }
   .card_img:hover button {
     opacity: 1;
-    bottom: 180px;
+    display: grid;
+    justify-content: center;
+    bottom: 80px;
+    left: 85px;
   }
   .card_img:hover span {
     height: 30px;
-    background-color: #fdfdfdc7;
+    background-color: #fdfdfd9a;
     color: #000;
     padding: 0;
+  }
+  /* -------------Room cards end-------------- */
+  #services {
+    width: 100%;
+    height: 100vh;
+  }
+  #services .service_list {
+    display: grid;
+    margin: 30px 5px;
+    margin-right: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 30px;
+  }
+  .service_list span {
+    font-size: 25px;
+    display: grid;
+    justify-content: center;
   }
 }
