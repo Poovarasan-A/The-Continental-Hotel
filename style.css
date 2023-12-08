@@ -576,5 +576,6 @@ body .bg_hotel {
     font-size: 25px;
     display: grid;
     justify-content: center;
+    font-weight: 500;
   }
 }
